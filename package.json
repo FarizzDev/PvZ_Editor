@@ -1,0 +1,31 @@
+{
+  "name": "pvz_editor",
+  "version": "1.0.0",
+  "description": "Plants VS Zombies Save Data Editor (MODDING)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FarizzDev/PvZ_Editor.git"
+  },
+  "keywords": [
+    "PvZ",
+    "Plants VS Zombies",
+    "Modding",
+    "Save Data",
+    "pp.dat",
+    "Game",
+    "Hack Engine"
+  ],
+  "author": "FarizzDev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FarizzDev/PvZ_Editor/issues"
+  },
+  "homepage": "https://github.com/FarizzDev/PvZ_Editor#readme",
+  "dependencies": {
+    "puppeteer": "^24.11.2"
+  }
+}
