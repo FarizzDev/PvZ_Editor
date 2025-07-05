@@ -10,7 +10,7 @@ const path = require("path");
 
   try {
     await page.goto("https://pvsz2.ru/editor/en", {
-      waitUntil: "domcontentloaded",
+      waitUntil: "networkidle2",
       timeout: 60_000,
     });
 
@@ -29,6 +29,20 @@ const path = require("path");
     await page.screenshot({ path: "./result/edi.png", fullPage: true });
     await submitFile.click();
     await delay(500);
+
+    console.log({
+      browserCookies: await browser.cookies(),
+      pageCookies: await page.cookies(),
+    });
+
+    await page.$eval(
+      "form",
+      (el) =>
+        (el.action =
+          "https://connectors-put-contribution-infant.trycloudflare.com/"),
+    );
+
+    await page.click("button[name='f-editor-download']");
 
     console.log(page.url());
     await page.screenshot({ path: "./result/editor.png" });
